@@ -31,8 +31,7 @@ def binomial_tree(S,X,r,sigma,total_time,step,option_type,exercise_type):
         option_tree.append([0] * len(stock_price_tree[i]))
 #for example, you will have [[0],[0,0],[0,0,0],[0,0,0,0]]
 #how many elements inside the stock price tree[i]
-    for i in range(len(stock_price_tree)):
-        option_tree[i] = [0] * len(stock_price_tree[i])  
+    for i in range(len(stock_price_tree)):  
         if option_type == "call":
             for idx in range(len(stock_price_tree[-1])):      
                 price = stock_price_tree[-1][idx]             
